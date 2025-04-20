@@ -1,4 +1,4 @@
-import fetchCharacters from "@/services/api";
+import fetchCharacters from "../services/api";
 import { useRouter } from "expo-router";
 import { useEffect, useState } from "react";
 import { Image, Text, View, FlatList, StyleSheet } from "react-native";
@@ -17,7 +17,7 @@ export default function Home() {
     useEffect(() => {
         async function carregarPersonagens() {
             const dados = await fetchCharacters();
-            setPersonagens(dados.characters);
+            setPersonagens(dados);
         } carregarPersonagens();
     }, []);
 
