@@ -14,7 +14,7 @@ export default function Localizacao() {
         return;
       }
 
-      // Obtém a localização
+      // obtém a localização
       let location = await Location.getCurrentPositionAsync({});
       setLocation(location);
     })();
@@ -31,7 +31,7 @@ export default function Localizacao() {
   if (!location) {
     return (
       <View style={styles.container}>
-        <ActivityIndicator size="large" color="#000" />
+        <ActivityIndicator size="large" color="#0A70A9" />
         <Text style={styles.text}>Carregando localização...</Text>
       </View>
     );
